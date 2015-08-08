@@ -1,0 +1,8 @@
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\obj\Debug\ArduinoControllerPart01.ArduinoController.resources
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.csproj.GenerateResource.Cache
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.exe.config
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.exe
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.pdb
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.Properties.Resources.resources
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.exe
+F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.pdb
