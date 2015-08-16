@@ -9,3 +9,11 @@ F:\VS_Projects\Arduino_Devel\ArduinoController\Part_01\ArduinoClientGUIPart01\ob
 F:\VS_Projects\GIT_HUB\ArduinoController_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.exe.config
 F:\VS_Projects\GIT_HUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.exe
 F:\VS_Projects\GIT_HUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.pdb
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.exe.config
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.exe
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\bin\Debug\ArduinoClientGUI_Part01.pdb
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoControllerPart01.ArduinoController.resources
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.Properties.Resources.resources
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.csproj.GenerateResource.Cache
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.exe
+J:\Working\VS_Projects\GITHUB\ArduinoController_01\ArduinoClientGUIPart01\obj\Debug\ArduinoClientGUI_Part01.pdb

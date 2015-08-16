@@ -35,15 +35,19 @@ namespace ArduinoControllerPart01
             string comPort = AutodetectArduinoPort(); 
             string msg;
 
-            if (!string.IsNullOrEmpty(comPort))
+            if (!string.IsNullOrEmpty(comPort)) /// An Arduino found
             {
                 msg = string.Format("Arduino comPort=[{0}]\n", comPort);
                 LogDisplay.AppendText(msg);
 
                 try
                 {
+                    /// Create a serial connection to the Arduino
                     serialPort = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
+
+                    /// All incoming messages from the Arduino will be handled by `DataReceiveHandler` method
                     serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceiveHandler);
+
                     serialPort.Open();
 
                     if (serialPort.IsOpen)
@@ -82,7 +86,7 @@ namespace ArduinoControllerPart01
 
                 }
             }
-            else // Will not go further is no Arduino board can be found
+            else // Will not go further if no Arduino board can be found
             {
                 msg = string.Format("The Arduino cannot be found. Please plug in the board and re-start the client GUI\n");
                 LogDisplay.AppendText(msg);
@@ -122,8 +126,14 @@ namespace ArduinoControllerPart01
             }
             return null;
         }
+
+        /// <summary>
+        /// Handling messages from the Arduino.
+        /// </summary>
+        /// <returns>none</returns>
         private void DataReceiveHandler(object sender, SerialDataReceivedEventArgs arg)
         {
+            /// For now, we just display all incoming message in the logger
             SerialPort sp = (SerialPort)sender;
             try
             {
@@ -139,6 +149,10 @@ namespace ArduinoControllerPart01
             }
         }
 
+        /// <summary>
+        /// Handling outgoing messages sending to the Arduino.
+        /// </summary>
+        /// <returns>none</returns>
         private void SendToArduino(string msg)
         {
             try
@@ -153,8 +167,13 @@ namespace ArduinoControllerPart01
             }
         }
 
+        /// <summary>
+        /// Handling events from the binary control button.
+        /// </summary>
+        /// <returns>none</returns>
         private void BinaryControl_CheckedChanged(object sender, EventArgs e)
         {
+            // Toggle the text display between 'ON'/'OFF'
             m_Command[0] = (char)Command.SET_BINARY;
             if (BinaryControl.Checked)
             {
@@ -167,29 +186,51 @@ namespace ArduinoControllerPart01
                 m_Command[1] = (char)BinarySet.OFF;
             }
 
+            // Send the binary command to the Arduino with the state of the button
             SendToArduino(new string(m_Command));
 
         }
 
+        /// <summary>
+        /// Exit the application when Quit button is clicked.
+        /// </summary>
+        /// <returns>none</returns>
         private void QuitButton_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
+        /// <summary>
+        /// Handling the state changes from the analog scroll.
+        /// </summary>
+        /// <returns>none</returns>
         private void AnalogControl_Scroll(object sender, EventArgs e)
         {
-
+            /// set the command to analog mode
             m_Command[0] = (char)Command.SET_ANALOG;
+
+            /// capture the current value from the scroll
             m_Command[1] = (char)AnalogControl.Value;
 
+            /// send the analog command to the Arduino
             SendToArduino(new string(m_Command));
         }
 
+
+        /// <summary>
+        /// This method will be called when the `Query` button is clicked.
+        /// </summary>
+        /// <returns>none</returns>
         private void QueryButton_Click(object sender, EventArgs e)
         {
+            /// NOTE:
+            /// the answer message will be handled in the `DataReceiveHandler` method
+            
+            /// Set the command to `Query` mode
             m_Command[0] = (char)Command.QUERY;
             m_Command[1] = (char)2;
 
+            /// send command to the Arduino
             SendToArduino(new string(m_Command));
 
         }
